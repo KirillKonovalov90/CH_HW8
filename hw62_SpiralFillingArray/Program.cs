@@ -23,7 +23,7 @@ void SprialFilling(int[,] array)
         return;
     }
 
-    for (int k = 0; k < array.GetLength(0) * array.GetLength(1); k++)
+    for (int k = 0; k < array.GetLength(0); k++)
     {
         for (int j = k; j < array.GetLength(1) - k; j++)
         {
