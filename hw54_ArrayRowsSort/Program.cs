@@ -1,4 +1,4 @@
-﻿        //Программа принимает 2хмерный массив и сортирует значения в строках массива
+﻿//Программа принимает 2хмерный массив и сортирует значения в строках массива
 
 int[,] CreateArray(int rows, int columns, int minValue = 0, int maxValue = 100)
 {
@@ -6,11 +6,11 @@ int[,] CreateArray(int rows, int columns, int minValue = 0, int maxValue = 100)
 
     var rnd = new Random();
 
-    for(int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = rnd.Next(minValue, maxValue +1);
+            array[i, j] = rnd.Next(minValue, maxValue + 1);
         }
     }
 
@@ -19,11 +19,11 @@ int[,] CreateArray(int rows, int columns, int minValue = 0, int maxValue = 100)
 
 void PrintArray(int[,] array)
 {
-    for(int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i, j], 3} ");
+            Console.Write($"{array[i, j],3} ");
         }
         Console.WriteLine();
     }
@@ -40,13 +40,13 @@ void SortingRowsOf2DArray(int[,] array)
             {
                 if (array[i, k] < array[i, k + 1])
                 {
-                int temp = array[i, k];
-                array[i, k] = array[i, k + 1];
-                array[i, k + 1] = temp;
-                }                
+                    int temp = array[i, k];
+                    array[i, k] = array[i, k + 1];
+                    array[i, k + 1] = temp;
+                }
             }
         }
-    }           
+    }
 }
 int[] massiveSize;
 int[,] massive;
