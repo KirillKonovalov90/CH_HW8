@@ -23,7 +23,7 @@ void SprialFilling(int[,] array)
         return;
     }
 
-    for (int k = 0; k < array.GetLength(0); k++)
+    for (int k = 0; k < array.GetLength(0) - 2; k++)
     {
         for (int j = k; j < array.GetLength(1) - k; j++)
         {
@@ -48,7 +48,7 @@ void SprialFilling(int[,] array)
     }
 }
 
-int[,] massive = new int[4, 4];
+int[,] massive = new int[6, 6];
 
 PrintArray(massive);
 Console.WriteLine();
